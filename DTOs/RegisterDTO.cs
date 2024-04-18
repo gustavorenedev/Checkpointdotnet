@@ -1,4 +1,6 @@
-﻿namespace checkpointdotnet.DTOs
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace checkpointdotnet.DTOs
 {
     public class RegisterDTO
     {

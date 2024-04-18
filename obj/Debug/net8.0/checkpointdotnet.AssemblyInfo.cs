@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("checkpointdotnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbdcf4fb12a029e2492db21230bb8166d4280f12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bef0b282092a68af0cbe5b0b719dbba2c220b4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("checkpointdotnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("checkpointdotnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

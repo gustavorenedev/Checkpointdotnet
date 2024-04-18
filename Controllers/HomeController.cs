@@ -9,9 +9,11 @@ namespace checkpointdotnet.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly DataContext _dataContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, DataContext dataContext)
         {
+            _dataContext = dataContext;
             _logger = logger;
         }
 
@@ -45,6 +47,24 @@ namespace checkpointdotnet.Controllers
             _dataContext.SaveChanges();
 
             return View("Login");
+        }
+
+        public IActionResult Login(LoginDTO request)
+        {
+            var find = _dataContext.Usuarios.FirstOrDefault(x => x.UserEmail == request.UserEmail);
+            if (find == null)
+            {
+                return NotFound();
+            }
+            if (find.UserPassword != request.UserPassword)
+            {
+                return BadRequest("Senha inválida");
+            }
+
+            TempData["Message"] = "Você logou!";
+
+            ViewBag.userData = find;
+            return View("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
