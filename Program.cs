@@ -6,10 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<DataContext>(options =>
-{
-    options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection"));
-});
 
 var app = builder.Build();
 
