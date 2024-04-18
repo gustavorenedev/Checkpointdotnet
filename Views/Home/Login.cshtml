@@ -1,0 +1,18 @@
+﻿@page
+@model checkpointdotnet.Views.Home.LoginModel
+@{
+}
+
+<h1>Login</h1>
+
+<form asp-controller="Home" asp-action="Login" method="post">
+    <div class="mb-3">
+        <label for="UserEmail" class="form-label">Email address</label>
+        <input name="UserEmail" type="email" class="form-control" id="UserEmail" placeholder="name@example.com">
+    </div>
+
+    <label for="UserPassword" class="form-label">Password</label>
+    <input name="UserPassword" type="password" class="form-control" id="UserPassword">
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
